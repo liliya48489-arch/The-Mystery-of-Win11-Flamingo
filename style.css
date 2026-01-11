@@ -1,0 +1,56 @@
+/* 清空默认边距 */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Win11 桌面背景 */
+body {
+  background-image: url("win11.jpg");
+  background-size: cover;        /* 铺满屏幕 */
+  background-position: center;   /* 居中 */
+  background-repeat: no-repeat;
+
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+/* Win11 任务栏（修改后） */
+#taskbar {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: fit-content;
+  height: 56px;
+  padding: 0 24px;
+
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-radius: 18px;
+  z-index: 1000;
+}
+
+.taskbar-center {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.taskbar-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.taskbar-icon:hover {
+  transform: scale(1.15);
+  filter: brightness(1.1);
+}
