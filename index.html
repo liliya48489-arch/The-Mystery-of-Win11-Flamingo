@@ -7,21 +7,41 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Win11 任务栏 -->
-  <div id="taskbar">
-    <div class="taskbar-center">
-      <img src="icons/win11.png" class="taskbar-icon" alt="">
-      <img src="icons/png-trans.png" class="taskbar-icon" alt="">
-      <img src="icons/f430c525ee30bb18bb59c66194233aec27c9a7ec1d00d-JM6CyV.png" class="taskbar-icon" alt="">
-      <img src="icons/43763182cad123b52dee655d78d4387febc839c41cf1-eWnoEG.png" class="taskbar-icon" alt="">
-          <div class="taskbar-search">
-            
-      <input type="text" class="search-input" placeholder="搜索...">
+  <!-- 开机登录界面（默认显示） -->
+  <div id="login-screen" class="screen active">
+    <div class="login-container">
+      <div class="user-avatar">
+        <img src="icons/avatar.png" alt="账户头像">
+      </div>
+      <div class="user-name">我的账户</div>
+      <div class="input-group">
+        <label for="username">账号</label>
+        <input type="text" id="username" placeholder="请输入账号">
+      </div>
+      <div class="input-group">
+        <label for="password">密码</label>
+        <input type="password" id="password" placeholder="请输入密码">
+      </div>
+      <button id="login-btn">登录</button>
+    </div>
+  </div>
+
+  <!-- Win11主界面（默认隐藏） -->
+  <div id="win11-screen" class="screen">
+    <div id="taskbar">
+      <div class="taskbar-center">
+        <img src="icons/win11.png" class="taskbar-icon" alt="">
+        <div class="search-box">
+           <img src="icons/b8de912d88adb83c2a6d8505e9caacd774da9b6e14d9e-9gww5U.png" class="search-icon" alt="搜索">
+           <input type="text" placeholder="搜索..." class="search-input">
+        </div>
+        <img src="icons/png-trans.png" class="taskbar-icon" alt="">
+        <img src="icons/43763182cad123b52dee655d78d4387febc839c41cf1-eWnoEG.png" class="taskbar-icon" alt="">
+        <img src="icons/f430c525ee30bb18bb59c66194233aec27c9a7ec1d00d-JM6CyV.png" class="taskbar-icon" alt="">
       </div>
     </div>
   </div>
 
   <script src="app.js"></script>
 </body>
-
 </html>
