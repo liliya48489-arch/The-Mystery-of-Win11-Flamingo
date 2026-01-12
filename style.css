@@ -194,3 +194,15 @@ body {
 #login-btn:hover {
   background: rgba(100, 100, 102, 0.8);
 }
+
+/* 桌面右上角图片样式（完全原生显示，无任何额外装饰） */
+.desktop-top-right-img {
+  position: fixed;
+  top: 20px;    /* 距离屏幕顶部20px */
+  right: 20px;  /* 距离屏幕右侧20px */
+  z-index: 200; /* 层级低于任务栏 */
+  
+  max-width: 280px; /* 控制图片最大宽度（可按需调整） */
+  height: auto;     /* 保持图片比例，不拉伸 */
+  /* 删掉所有装饰属性（圆角、阴影），仅保留图片本身 */
+}
